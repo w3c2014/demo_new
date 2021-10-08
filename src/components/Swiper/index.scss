@@ -1,0 +1,245 @@
+@import "../../scss/index";
+
+// 轮播图层级
+.swiper-container {
+  z-index: 0;
+}
+
+.swiper_box {
+  position: relative;
+  padding-top: 53px;
+  margin: 0 auto;
+  max-width: 1024px;
+
+  .slide_left_button {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+  }
+
+  .slide_right_button {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+.swiper_children_box {
+  display: inline-block;
+}
+.swiper_children {
+  .image_box {
+    position: relative;
+    height: 268px;
+    width: 100%;
+    border-radius: 10px;
+
+    img {
+      height: 268px;
+      width: 100%;
+    }
+  }
+
+  .swiper_children_des {
+    margin-top: 37px;
+    @include common-text(24px, #131720, 400);
+    line-height: 30px;
+    span {
+      display: block;
+    }
+  }
+
+  .hover_hint {
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px 35px;
+    background: #c51f75;
+    box-shadow: 0px 3px 18px 0px rgba(183, 183, 183, 0.19);
+    opacity: 0.64;
+    border-radius: 10px;
+
+    @include common-text(18px, #ffffff, 400);
+    line-height: 30px;
+  }
+}
+
+.swiper_children:hover {
+  .hover_hint {
+    transition: display 0.4s;
+    display: unset;
+  }
+}
+
+.mobile_children_box {
+  display: none;
+
+  .mobile_children_image {
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      height: 188px;
+      width: 100%;
+    }
+  }
+  .children_des_top {
+    @include common-text(15px, #131720, bold, none);
+    line-height: 24px;
+    word-break: break-all;
+  }
+  .children_des_bottom {
+    margin: 0;
+    @include common-text(15px, #131720, 400, none);
+    line-height: 24px;
+  }
+}
+
+.scroll-warpper {
+  .scroll-content {
+    position: relative;
+  }
+
+  .scroll-content > div {
+    display: inline-block;
+    text-align: center;
+
+    .swiper_children_box {
+      &:nth-child(1) {
+        margin-right: 20px;
+      }
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper_box {
+    padding-top: 0;
+  }
+
+  .slide_left_button,
+  .slide_right_button,
+  .swiper_children_box {
+    display: none;
+  }
+
+  .swiper_children {
+    margin: 0 16px;
+    .image_box {
+      height: 188px;
+      img {
+        height: 188px;
+      }
+    }
+    .swiper_children_des {
+      margin-top: 0;
+    }
+  }
+
+  .mobile_children_box {
+    display: block;
+    margin: 0 16px 28px;
+    text-align: left;
+  }
+
+}
+// tablet 平板电脑  768px
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .swiper_box {
+    padding: 53px 50px 0;
+
+    .slide_left_button {
+      left: 50px;
+      z-index: 10;
+    }
+
+    .slide_right_button {
+      right: 50px;
+      z-index: 10;
+    }
+  }
+
+  .swiper_children {
+    .swiper_children_des {
+      margin-top: 20px;
+      @include common-text(16px, #131720, 400);
+    }
+    .hover_hint {
+      height: 178px;
+      padding: 30px 20px 0;
+      @include common-text(12px, #ffffff, 400);
+      line-height: 24px;
+    }
+    .image_box {
+      position: relative;
+      height: 208px;
+      border-radius: 10px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .scroll-warpper {
+    .scroll-content > div {
+      display: inline-block;
+      text-align: center;
+
+      .swiper_children_box {
+        &:nth-child(1) {
+          margin: 10px 20px;
+        }
+        &:nth-child(2) {
+          margin: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .swiper_box {
+    padding: 53px 50px 0;
+    .slide_left_button {
+      left: 70px;
+      z-index: 10;
+    }
+
+    .slide_right_button {
+      right: 70px;
+      z-index: 10;
+    }
+  }
+  .swiper_children {
+    .swiper_children_des {
+      margin-top: 20px;
+      @include common-text(16px, #131720, 400);
+    }
+    .hover_hint {
+      height: 178px;
+      padding: 30px 20px 0;
+      @include common-text(12px, #ffffff, 400);
+      line-height: 24px;
+    }
+    .image_box {
+      position: relative;
+      height: 208px;
+      border-radius: 10px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

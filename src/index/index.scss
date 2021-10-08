@@ -1,0 +1,25 @@
+@import "../scss/index";
+
+
+
+.mobile_hidden {
+  @include mobile {
+    display: none;
+  }
+}
+
+.pc_hidden {
+  @include desktop {
+    display: none;
+  }
+  @include bigDesktop {
+    display: none;
+  }
+  @include smallDesktop {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+

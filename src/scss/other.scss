@@ -1,0 +1,31 @@
+// 文字信息样式
+@mixin common-text($size_: 18px, $color_: #fff, $weight_: none, $align_: left, $family_: Work Sans ) {
+  font-size: $size_;
+  color: $color_;
+  font-weight: $weight_;
+  text-align: $align_;
+  font-family: $family_;
+}
+
+// flex布局
+@mixin common-flex($content_: center, $items_: center) {
+  display: flex;
+  justify-content: $content_;
+  align-items: $items_;
+}
+
+// absolute
+@mixin common-absolute($top, $left, $right, $bottom) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+.center_box {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+}

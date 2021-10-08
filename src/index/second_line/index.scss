@@ -1,0 +1,371 @@
+@import "../../scss/index";
+
+// 公用的段落内容
+.cycan_netWok,
+.how_works,
+.infrastructure_introduce {
+  h2 {
+    @include common-text(40px, #131720, bold);
+  }
+  p {
+    margin-top: 47px;
+    line-height: 30px;
+    @include common-text(18px, #131720, 400);
+    span {
+      color: #3f52d3;
+    }
+  }
+}
+
+// 第一小节
+.cycan_netWok {
+  padding-top: 300px;
+  @extend .center_box;
+
+  .cycan_netWok_problem {
+    margin-bottom: 46px;
+  }
+
+  .cycan_netWok_right {
+    margin-top: 70px;
+    img {
+      width: 374px;
+      height: 313px;
+    }
+  }
+}
+
+// 第二小节 - 标题
+.paragraph_title {
+  margin-top: 138px;
+  margin-bottom: 140px;
+  @extend .center_box;
+  @include common-text(48px, #c51f75, bold, left, Avenir Next);
+}
+
+// 第二小节
+.how_works {
+  @extend .center_box;
+  justify-content: space-between;
+  @include mobile {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 60px;
+  }
+
+  @include mobile {
+    background-color: #fcf7f5;
+  }
+  align-items: flex-end;
+  .how_works_left {
+     margin-right: 20px;
+    @include mobile {
+     
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      width: 377px;
+      height: 377px;
+      @include mobile {
+        margin-bottom: 17px;
+        height: 88px;
+        width: 88px;
+      }
+    }
+  }
+}
+
+// 第三小节
+.infrastructure_introduce {
+  margin-top: 136px;
+  margin-bottom: 118px;
+  @extend .center_box;
+  @include mobile {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 60px;
+    width: 100vw;
+  }
+
+  .mobile_title {
+    display: none;
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  .cycan_netWok,
+  .how_works,
+  .infrastructure_introduce {
+    h2 {
+      // margin-bottom: 25px;
+      @include common-text(24px, #131720, bold, center);
+    }
+    p {
+      margin: 25px 18px 0;
+      line-height: 25px;
+      @include common-text(15px, #131720, 400, center);
+      span {
+        color: #3f52d3;
+      }
+    }
+  }
+
+  //top
+  .cycan_netWok {
+    position: relative;
+    margin-bottom: 44px;
+    padding-top: 143px;
+    .cycan_netWok_right {
+      padding: 0;
+
+      img {
+        position: absolute;
+        top: 57px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 94px;
+        height: 78px;
+      }
+    }
+  }
+
+  // center
+  .paragraph_title {
+    margin: 0;
+    padding-top: 59px;
+    padding-bottom: 26px;
+
+    justify-content: center;
+    background-color: #fcf7f5;
+    @include common-text(30px, #c51f75, bold, left, Avenir Next);
+  }
+  .how_works {
+    position: relative;
+    padding-top: 110px;
+    .how_works_left {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 88px;
+      width: 88px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // foot
+
+  .infrastructure_introduce {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 389px;
+    margin-bottom: 0;
+    .mobile_title {
+      display: block;
+      @include common-text(24px, #131720, bold, center);
+    }
+
+    .mobile_hidden_title {
+      display: none;
+    }
+    .infrastructure_introduce_right {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+
+      img {
+        width: 257px;
+        height: 300px;
+      }
+    }
+  }
+  // end
+}
+
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cycan_netWok {
+    position: relative;
+    padding-top: 350px;
+    .cycan_netWok_right {
+      img {
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 178px;
+      }
+    }
+  }
+
+  .cycan_netWok,
+  .how_works,
+  .infrastructure_introduce {
+    h2 {
+      margin-bottom: 40px;
+      @include common-text(35px, #131720, bold, center);
+    }
+    p {
+      margin-top: 20px;
+      line-height: 25px;
+      @include common-text(15px, #131720, 400, center);
+      span {
+        color: #3f52d3;
+      }
+    }
+  }
+
+  //top
+  .cycan_netWok_right {
+    img {
+      width: 300px;
+      height: 255px;
+    }
+  }
+
+  // center
+  .paragraph_title {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    justify-content: center;
+  }
+  .how_works {
+    position: relative;
+    padding-top: 200px;
+    .how_works_left {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      height: 178px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // foot
+
+  .infrastructure_introduce {
+    position: relative;
+    padding-top: 200px;
+    .infrastructure_introduce_right {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 238px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .cycan_netWok {
+    align-items: center;
+  }
+  .cycan_netWok,
+  .how_works,
+  .infrastructure_introduce {
+    h2 {
+      margin-bottom: 40px;
+      @include common-text(35px, #131720, bold);
+    }
+    p {
+      margin-top: 20px;
+      line-height: 25px;
+      @include common-text(15px, #131720, 400);
+      span {
+        color: #3f52d3;
+      }
+    }
+  }
+
+  //top
+  .cycan_netWok_right {
+    img {
+      width: 300px;
+      height: 255px;
+    }
+  }
+
+  // center
+  .paragraph_title {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+  .how_works {
+    .how_works_left {
+      margin-right: 20px;
+      img {
+        width: 300px;
+        height: 320px;
+      }
+    }
+  }
+
+  // foot
+  .infrastructure_introduce_right {
+    margin-left: 20px;
+    img {
+      width: 250px;
+      height: 305px;
+    }
+  }
+}
+
+/* desktop 桌面 */
+@media screen and (min-width: 1199px) and (max-width: 1600px) {
+  .cycan_netWok {
+    display: flex;
+    align-items: flex-end;
+    .cycan_netWok_left {
+      .cycan_netWok_answer {
+        margin-bottom: 30px;
+      }
+      .cycan_netWok_answer_end {
+        margin: 0;
+      }
+    }
+    .cycan_netWok_right {
+      margin-left: 30px;
+    }
+  }
+
+ 
+
+  .infrastructure_introduce {
+    align-items: flex-end;
+  }
+}
+
+// bigDesktop 大型屏幕
+@media screen and (min-width: 1601px) and (max-width: 3000px) {
+  .cycan_netWok {
+    display: flex;
+    align-items: flex-end;
+
+    .cycan_netWok_right {
+      margin-left: 30px;
+    }
+  }
+
+  .infrastructure_introduce {
+    align-items: flex-end;
+  }
+}

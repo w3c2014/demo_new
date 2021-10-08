@@ -1,0 +1,114 @@
+@import "../../scss/index";
+.cycan_footer {
+  background-color: #131720;
+
+  .cycan_footer_content {
+    padding-top: 89px;
+    padding-bottom: 112px;
+    @extend .center_box;
+  }
+
+  // left
+  .cycan_footer_left {
+    .icon_box {
+      img {
+        margin-right: 19px;
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .footer_logo {
+      margin-bottom: 21px;
+      width: 202px;
+      height: 39px;
+    }
+  }
+
+  // right
+  .cycan_footer_right {
+    p {
+      @include common-text(18px, #bbc1ca, 400, none);
+      line-height: 30px;
+      @include mobile {
+        margin: 0;
+        @include common-text(15px, #bbc1ca, 400);
+      }
+    }
+    .footer_button {
+      margin-top: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 124px;
+      height: 54px;
+      background: #c51f75;
+      border-radius: 8px;
+      @include common-text(18px, #fff, 300);
+      line-height: 30px;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  .cycan_footer {
+    .cycan_footer_content {
+      display: block;
+      text-align: left;
+      padding: 41px 38px 45px;
+      .cycan_footer_left {
+        .icon_box {
+          margin-bottom: 33px;
+        }
+        img {
+          margin-right: 13px;
+          height: 35px;
+          width: 35px;
+        }
+        .footer_logo {
+          width: 141px;
+          height: 27px;
+        }
+      }
+
+      // right
+      .cycan_footer_right {
+        p {
+          margin: 0;
+          @include common-text(15px, #bbc1ca, 400);
+        }
+        .footer_button {
+          display: inline-block;
+          padding: 10px 19px;
+          height: auto;
+          width: auto;
+          margin-top: 24px;
+          @include common-text(16px, #fff, 300);
+        }
+      }
+    }
+  }
+}
+
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cycan_footer {
+    .cycan_footer_content {
+      justify-content: space-around;
+      padding-top: 69px;
+      padding-bottom: 82px;
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .cycan_footer {
+    background-color: #131720;
+
+    .cycan_footer_content {
+      justify-content: space-around;
+    }
+  }
+}

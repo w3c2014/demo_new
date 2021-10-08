@@ -1,0 +1,40 @@
+@import "../../scss/index";
+
+.protocol_introduce_title {
+  margin: 136px auto 114px;
+  @extend .center_box;
+  @include common-text(36px, #131720, bold);
+}
+// mobile
+@media screen and (max-width: 768px) {
+  .protocol_introduce_title {
+    margin-top: 62px;
+    margin-bottom: 50px;
+    justify-content: center;
+    @include common-text(22px, #131720, bold);
+  }
+  // end
+}
+
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .protocol_introduce_title {
+    justify-content: center;
+    margin: 86px auto 44px;
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .protocol_introduce_title {
+    margin: 106px auto 84px;
+  }
+}
+
+/* desktop 桌面 */
+@media screen and (min-width: 1199px) and (max-width: 1600px) {
+}
+
+// bigDesktop 大型屏幕
+@media screen and (min-width: 1601px) and (max-width: 3000px) {
+}

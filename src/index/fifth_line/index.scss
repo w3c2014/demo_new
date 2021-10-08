@@ -1,0 +1,70 @@
+@import "../../scss/index";
+
+.applications_dat_bgc {
+  padding: 136px 0;
+  width: 100%;
+  background: #fcf7f5;
+
+  .applications_title {
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-bottom: 114px;
+    @include common-text(36px, #131720, bold);
+  }
+
+  .applications_mobile_title {
+    display: none;
+  }
+
+  .apply_button {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 68px;
+    background: #c51f75;
+    border-radius: 8px;
+    cursor: pointer;
+    @include common-text(26px, #fff, bold, center);
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  .applications_dat_bgc {
+    padding: 0px 0px 68px 0;
+
+    .applications_title {
+      display: none;
+    }
+    .applications_mobile_title {
+      margin: 0;
+      padding-top: 61px;
+      padding-bottom: 50px;
+      display: block;
+      @include common-text(22px, #131720, bold, center);
+    }
+  }
+  // end
+}
+
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .applications_dat_bgc {
+    margin-top: 120px;
+    padding: 80px 0;
+    .applications_title {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .applications_dat_bgc {
+    padding: 100px 0;
+  }
+}
+

@@ -1,0 +1,40 @@
+
+
+@mixin bigDesktop {
+  @media screen and (min-width: 1601px) and (max-width: 3000px) {
+    @content;
+  }
+}
+
+/* 桌面 */
+@mixin desktop {
+  @media screen and (min-width: 1199px) and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin smallDesktop {
+  @media screen and (min-width: 1025px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+/* 平板电脑 */
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin smallMobile {
+  @media only screen and (min-device-width: 300px) and (max-device-width: 320px) {
+    @content;
+  }
+}
+

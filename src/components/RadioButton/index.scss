@@ -1,0 +1,133 @@
+@import "../../scss/index";
+// .test_label {
+//   height: 2px;
+//   width: 20px;
+//   background-color: red;
+// }
+
+// input[type="radio"] {
+//   background-color: red;
+// }
+
+.radio_box {
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
+
+  label {
+    margin-right: 15px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #999;
+  }
+
+  /*设置选中的input的样式*/
+  /* + 是兄弟选择器,获取选中后的label元素*/
+  input:checked + label {
+    background-color: #fff;
+    width: 4px;
+    height: 4px;
+    border: 9px solid #c51f75;
+  }
+
+  .radio_line {
+    margin-bottom: 24px;
+    .radio_label_text {
+      @include common-text(24px, #000, 400, none);
+      line-height: 30px;
+    }
+  }
+
+  .radio_line:last-child {
+    margin-bottom: 0;
+  }
+
+  // mobile
+  @media screen and (max-width: 768px) {
+    .radio_line {
+      margin-bottom: 5px;
+    }
+
+    input:checked + label {
+      width: 3px;
+      height: 3px;
+      border: 5px solid #c51f75;
+      background-color: #fff;
+    }
+
+    label {
+      margin-right: 8px;
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 1px solid #999;
+    }
+
+    .radio_line {
+      margin-bottom: 0px;
+      .radio_label_text {
+        line-height: 6px;
+        @include common-text(12px, #000, 400, none);
+      }
+    }
+  }
+  // tablet 平板电脑
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .radio_line {
+      margin-bottom: 5px;
+    }
+
+    input:checked + label {
+      width: 3px;
+      height: 3px;
+      border: 6px solid #c51f75;
+      background-color: #fff;
+    }
+
+    label {
+      margin-right: 8px;
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 1px solid #999;
+    }
+
+    .radio_line {
+      margin-bottom: 5px;
+      .radio_label_text {
+        @include common-text(16px, #000, 400, none);
+      }
+    }
+  }
+  // smallDesktop 小桌面
+  @media screen and (min-width: 1025px) and (max-width: 1199px) {
+    input:checked + label {
+      width: 3px;
+      height: 3px;
+      border: 6px solid #c51f75;
+      background-color: #fff;
+    }
+
+    label {
+      margin-right: 8px;
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 1px solid #999;
+    }
+
+    .radio_line {
+      margin-bottom: 5px;
+      .radio_label_text {
+        @include common-text(16px, #000, 400, none);
+      }
+    }
+  }
+}

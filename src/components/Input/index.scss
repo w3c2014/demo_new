@@ -1,0 +1,33 @@
+@import "../../scss/index";
+
+.input_box {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 50px;
+  width: calc(100% - 75px);
+  height: 70px;
+  border: 2px solid #d2d6db;
+  border-radius: 35px;
+  overflow: hidden;
+
+  .input_element {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+
+    @include common-text(24px, #131720, 400, none);
+  }
+  .closeIcon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    height: 18px;
+    width: 18px;
+    transform: translateY(-50%);
+  }
+  .hiddenCloseIcon {
+    display: none;
+  }
+}

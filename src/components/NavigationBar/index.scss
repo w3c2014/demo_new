@@ -1,0 +1,127 @@
+@import "../../scss/index";
+
+.cycan_header {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 10;
+
+  .cycan_header_son {
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 26px;
+      padding-right: 16px;
+      width: calc(100% - 42px);
+    }
+    @include smallDesktop {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 26px;
+      padding-right: 16px;
+      width: calc(100% - 42px);
+    }
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 26px;
+      padding-right: 16px;
+      width: calc(100% - 42px);
+    }
+  }
+
+  .cycan_logo {
+    width: 210px;
+    height: 41px;
+    cursor: pointer;
+
+    @include mobile {
+      width: 130px;
+      height: 24px;
+    }
+  }
+
+  .cycan_logo_right {
+    width: 0;
+    height: 0;
+    @include mobile {
+      width: 28px;
+      height: 20px;
+    }
+    @include smallDesktop {
+      width: 28px;
+      height: 20px;
+    }
+    @include tablet {
+      width: 28px;
+      height: 20px;
+    }
+  }
+}
+
+.nav_box {
+  display: inline-block;
+  padding-top: 10px;
+
+  @include mobile {
+    display: none;
+  }
+
+  @include smallDesktop {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+    // margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    @include common-text(18px, #ffeafb, 400);
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -9px;
+      content: " ";
+      transition: width 0.5s;
+      width: 0%;
+      height: 1px;
+
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+
+    &:hover {
+      &::after {
+        transition: width 0.5s;
+        width: 100%;
+        background-color: #ffeafb;
+      }
+    }
+  }
+
+  .nav_active {
+    @extend .nav;
+    &::after {
+      width: 100%;
+      background-color: #ffeafb;
+    }
+  }
+
+  .nav_div {
+    position: relative;
+    margin-right: 20px;
+    padding: 0px 20px;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+  }
+}

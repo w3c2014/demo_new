@@ -1,0 +1,155 @@
+@import "../../scss/index";
+
+.introduce_dat {
+  background-color: #000;
+
+  h2 {
+    padding-bottom: 5px;
+    @include common-text(40px, #ffffff, bold, left);
+  }
+
+  p {
+    margin-top: 28px;
+    line-height: 30px;
+    @include common-text(18px, #ffffff, 400, left);
+  }
+
+  .introduce_dat_children {
+    position: relative;
+    padding-top: 135px;
+    padding-bottom: 110px;
+    @extend .center_box;
+    justify-content: flex-end;
+  }
+  .dat_left_image {
+    position: absolute;
+    top: 15%;
+    left: -50px;
+    width: 543px;
+    height: 498px;
+  }
+
+  .mobile_dat_left_image {
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+  }
+
+  .dat_right {
+    width: 600px;
+    line-height: 30px;
+  }
+  .mobile_show {
+    display: none;
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  .introduce_dat {
+    display: inline-block;
+    width: 100vw;
+    padding-top: 0;
+    padding-bottom: 61px;
+
+    .introduce_dat_children {
+      padding-bottom: 0;
+    }
+
+    .dat_left_image {
+      display: none;
+    }
+    .mobile_dat_left_image {
+      width: 155px;
+      height: 143px;
+    }
+
+    .dat_right {
+      width: auto;
+
+      h2 {
+        margin-top: 40px;
+        @include common-text(22px, #ffffff, bold, center);
+      }
+
+      p {
+        margin: 20px 16px 0;
+        @include common-text(15px, #ffffff, 400, center);
+      }
+
+      .mobile_hidden {
+        display: none;
+      }
+
+      .mobile_show {
+        display: block;
+      }
+
+    }
+  }
+}
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .introduce_dat {
+    h2 {
+      padding-bottom: 5px;
+      @include common-text(35px, #ffffff, bold, left);
+    }
+
+    p {
+      margin-top: 28px;
+      line-height: 30px;
+      @include common-text(15px, #ffffff, 400, left);
+    }
+
+    .introduce_dat_children {
+      padding-top: 45px;
+      padding-bottom: 30px;
+    }
+    .dat_left_image {
+      position: absolute;
+      top: 15%;
+      left: 0px;
+      width: 343px;
+      height: 298px;
+    }
+
+    .dat_right {
+      width: 700px;
+    }
+  }
+}
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .introduce_dat {
+    h2 {
+      padding-bottom: 5px;
+      @include common-text(35px, #ffffff, bold, left);
+    }
+
+    p {
+      margin-top: 28px;
+      line-height: 30px;
+      @include common-text(15px, #ffffff, 400, left);
+    }
+
+    .introduce_dat_children {
+      padding-top: 95px;
+      padding-bottom: 80px;
+    }
+    .dat_left_image {
+      position: absolute;
+      top: 15%;
+      left: -30px;
+      width: 443px;
+      height: 398px;
+    }
+
+    .dat_right {
+      width: 650px;
+    }
+  }
+}

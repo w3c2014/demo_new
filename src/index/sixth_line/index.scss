@@ -1,0 +1,99 @@
+@import "../../scss/index";
+
+.introduce_elc {
+  margin: 0 auto;
+  margin-bottom: 103px;
+  max-width: 1024px;
+
+  .elc_title {
+    margin-top: 137px;
+    margin-bottom: 70px;
+    @include common-text(40px, #131720, bold);
+  }
+
+  .elc_description {
+    line-height: 30px;
+    @include common-text(18px, #131720, 400);
+  }
+
+  .elc_description_effect {
+    margin-top: 27px;
+    margin-bottom: 59px;
+  }
+
+  .elc_other_description {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    @include common-text(18px, #131720, 400);
+    img {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  .introduce_elc {
+    margin: 0 16px;
+
+    .elc_title {
+      margin-top: 61px;
+      margin-bottom: 30px;
+      @include common-text(24px, #131720, bold, center);
+    }
+
+    .elc_description {
+      @include common-text(15px, #131720, 400);
+      word-break: break-all;
+    }
+    .elc_description_effect {
+      margin-bottom: 39px;
+    }
+
+    .elc_other_description {
+      margin-bottom: 33px;
+      align-items: flex-start;
+      @include common-text(15px, #131720, 400);
+      img {
+        margin-top: 5px;
+      }
+    }
+  }
+  // end
+}
+
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .introduce_elc {
+    .elc_title {
+      margin-top: 100px;
+      margin-bottom: 50px;
+      @include common-text(35px, #131720, bold,center);
+    }
+    p{
+      margin: 0 15px;
+    }
+    .elc_description {
+      text-align: center;
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .introduce_elc {
+    .elc_title {
+      margin-top: 100px;
+      margin-bottom: 60px;
+      @include common-text(35px, #131720, bold,center);
+    }
+    p{
+      margin: 0 18px;
+    }
+  }
+}
+

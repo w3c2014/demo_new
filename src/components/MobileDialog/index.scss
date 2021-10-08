@@ -1,0 +1,83 @@
+@import "../../scss/index";
+
+.collapse {
+  border-radius: 5px;
+
+  .collapse-cell {
+    padding: 10px 0;
+
+    @include common-text(15px, #131720, 400, left);
+    display: flex;
+    justify-content: space-between;
+    img {
+      padding: 2px;
+      height: 12px;
+      width: 15px;
+      transition: transform 0.5s;
+    }
+  }
+
+  .collapse-cell:nth-child(1) {
+    margin-top: 25px;
+  }
+  .collapse-cell:last-child {
+    margin-bottom: 25px;
+  }
+
+  // 箭头
+  .arrow_top {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+
+  .arrow_bottom {
+    transform: rotate3d(0, 0, 2, -180deg);
+  }
+
+  .collapse_son {
+    div {
+      padding-bottom: 15px;
+      padding-left: 50px;
+      @include common-text(13px, #131720, 400, left);
+    }
+
+    div:nth-child(1) {
+      margin-top: 20px;
+    }
+
+    div:last-child {
+      padding-bottom: 0px;
+    }
+  }
+
+  .collapse_son_hidden {
+    max-height: 0;
+    transition: max-height 0.5s;
+    overflow: hidden;
+  }
+
+  .collapse_son_show {
+    max-height: 300px;
+    transition: max-height 1s;
+    overflow: hidden;
+  }
+}
+
+.collapse_show {
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.collapse_hidden {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+[data-reach-dialog-overlay] {
+  z-index: 10;
+}
+
+[data-reach-dialog-content] {
+  width: 80vw;
+}

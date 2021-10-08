@@ -1,0 +1,206 @@
+@import "../../scss/index";
+
+// 公共 - 使用
+@mixin absoluteFullScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+// 盒子
+.cycan_introduce {
+  height: 50vw;
+  overflow: hidden;
+
+  .mobile_head_bgc {
+    @include absoluteFullScreen;
+    width: 0;
+    height: 0;
+  }
+
+  .introduce_content {
+    position: relative;
+    margin-top: 300px;
+    margin-left: 16vw;
+
+    .cycan_big_name {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin-bottom: 21px;
+      width: 450px;
+      height: 60px;
+    }
+
+    .introduce_text {
+      @include common-text(38px, #fff, 600);
+    }
+  }
+
+  .more_introduce_text {
+    position: absolute;
+    top: 235px;
+    width: 608px;
+    @include common-text(23px, #fff, 300);
+
+    span {
+      color: #ffd75f;
+    }
+  }
+
+  .introduce_money {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  .cycan_introduce {
+    position: relative;
+    height: 520px;
+    width: 100vw;
+    overflow: hidden;
+
+    .cycan_introduce_big_image {
+      display: none;
+    }
+
+    .mobile_head_bgc {
+      height: 520px;
+      width: 100vw;
+    }
+
+    .introduce_content {
+      margin-top: 110px;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .introduce_content {
+      .cycan_big_name {
+        position: relative;
+        width: 198px;
+        height: 26px;
+      }
+      .introduce_text {
+        margin: 0 36px;
+        word-break: keep-all;
+        @include common-text(21px, #fff, 600, center);
+      }
+
+      .more_introduce_text {
+        position: relative;
+        margin: 0px 53px;
+        width: calc(100vw - 106px);
+        top: 18px;
+        word-break: keep-all;
+        @include common-text(12px, #fff, 300, center);
+      }
+    }
+  }
+  // end
+}
+
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cycan_introduce {
+    .cycan_introduce_big_image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .introduce_content {
+      .cycan_big_name {
+        left: -50px;
+        top: -120px;
+        width: 300px;
+        height: 35px;
+      }
+      .introduce_text {
+        position: absolute;
+        top: -80px;
+        left: -50px;
+        @include common-text(28px, #fff, 600);
+      }
+      .more_introduce_text {
+        top: 0px;
+        left: -50px;
+        @include common-text(20px, #fff, 300);
+      }
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .cycan_introduce {
+    .cycan_introduce_big_image {
+      @include absoluteFullScreen;
+      width: 100%;
+    }
+    .introduce_content {
+      .cycan_big_name {
+        top: -50px;
+        width: 400px;
+        height: 50px;
+      }
+      .introduce_text {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 686px;
+        @include common-text(28px, #fff, 600);
+      }
+      .more_introduce_text {
+        top: 140px;
+        @include common-text(20px, #fff, 300);
+      }
+    }
+  }
+}
+
+/* desktop 桌面 */
+@media screen and (min-width: 1199px) and (max-width: 1600px) {
+  .cycan_introduce {
+    .cycan_introduce_big_image {
+      @include absoluteFullScreen;
+      width: 100%;
+    }
+    .introduce_content {
+      .introduce_text {
+        position: absolute;
+        top: 105px;
+        left: 0px;
+        width: 686px;
+      }
+      .more_introduce_text {
+        top: 220px;
+      }
+    }
+  }
+}
+
+// bigDesktop 大型屏幕
+@media screen and (min-width: 1601px) and (max-width: 3000px) {
+  .cycan_introduce {
+    .cycan_introduce_big_image {
+      @include absoluteFullScreen;
+      width: 100%;
+    }
+    .introduce_content {
+      .introduce_text {
+        position: absolute;
+        top: 125px;
+        left: 0px;
+        width: 686px;
+      }
+    }
+  }
+}

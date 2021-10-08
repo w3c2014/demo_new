@@ -1,0 +1,185 @@
+@import "../../scss/index";
+
+.introduce_team_bgc {
+  background: #fcf7f5;
+
+  .introduce_team_title {
+    margin: 0 auto;
+    padding-top: 136px;
+    margin-bottom: 69px;
+    max-width: 1024px;
+    @include common-text(36px, #131720, bold);
+  }
+
+  .introduce_team {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  p {
+    @include common-text(18px, #131720, 400);
+    line-height: 30px;
+  }
+}
+
+.experience_ {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.introduce_team_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  img {
+    margin-left: 66px;
+    width: 251px;
+    height: 195px;
+  }
+}
+
+.introduce_team_bottom {
+  margin-top: 72px;
+  padding-bottom: 138px;
+  @include common-flex(space-between);
+
+  .team_bottom_image {
+    margin-right: 129px;
+    width: 251px;
+    height: 195px;
+  }
+
+  p {
+    @include mobile {
+      @include common-text(15px, #131720, 400, center);
+    }
+  }
+
+  .developers_ {
+    margin: 40px 0;
+  }
+}
+
+.introduce_developers > p {
+  &:nth-child(1) {
+    margin: 24px 28px 0;
+  }
+  &:nth-child(2) {
+    margin: 40px 28px 37px;
+  }
+  &:nth-child(3) {
+    margin: 0 12px;
+  }
+}
+// mobile
+@media screen and (max-width: 768px) {
+  .introduce_team_bgc {
+    position: relative;
+    .introduce_team_title {
+      padding-top: 159px;
+      margin-bottom: 30px;
+      @include common-text(24px, #131720, bold, center);
+    }
+
+    .introduce_team_top {
+      img {
+        margin-left: 0;
+        position: absolute;
+        top: 62px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 73px;
+        width: 95px;
+      }
+      p {
+        margin: 39px 18px 44px;
+        @include common-text(15px, #131720, 400, center);
+      }
+    }
+
+    .experience_ {
+      margin: 0 31px;
+    }
+
+    .introduce_team_bottom {
+      padding-bottom: 47px;
+      margin-top: 0;
+      display: block;
+      overflow: hidden;
+      text-align: center;
+    }
+    .team_bottom_image {
+      margin-right: 0;
+      height: 83px;
+      width: 104px;
+    }
+  }
+}
+
+// tablet 平板电脑
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .introduce_team_bgc {
+    position: relative;
+    .introduce_team_title {
+      padding-top: 280px;
+      margin-bottom: 20px;
+      @include common-text(35px, #131720, bold, center);
+    }
+
+    .introduce_team_top {
+      img {
+        margin-left: 0;
+        position: absolute;
+        top: 62px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 170px;
+        width: 190px;
+      }
+      p {
+        margin: 18px;
+        @include common-text(18px, #131720, 400, center);
+      }
+    }
+
+    .experience_ {
+      margin: 0 31px;
+    }
+
+    .introduce_team_bottom {
+      padding-bottom: 47px;
+      margin-top: 50px;
+      display: block;
+      overflow: hidden;
+      text-align: center;
+    }
+    .team_bottom_image {
+      margin-right: 0;
+      height: 180px;
+      width: 210px;
+    }
+
+    .introduce_developers {
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .introduce_team_bgc {
+    .introduce_team_top {
+      img {
+        margin-left: 30px;
+      }
+    }
+    .introduce_team_bottom {
+      img {
+        margin-right: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+@import "../../scss/index";
+
+.dialog_content {
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 60px;
+
+  .close_icon {
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .dialog_title {
+    margin-bottom: 50px;
+    @include common-text(50px, #131720, 800, center);
+  }
+
+  .required_field {
+    margin-top: 25px;
+    margin-bottom: 45px;
+    line-height: 30px;
+    @include common-text(24px, #c51f75, 300, none);
+  }
+
+  .describe_yourself {
+    line-height: 30px;
+    @include common-text(24px, #131720, 600, none);
+  }
+
+  .check_prompt {
+    margin-top: 60px;
+    margin-bottom: 62px;
+    line-height: 30px;
+    @include common-text(18px, #5e676f, 300, none);
+  }
+
+  .other_explain {
+    margin-bottom: 87px;
+    line-height: 30px;
+    @include common-text(18px, #5e676f, 300, none);
+  }
+
+  .submit_button {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 286px;
+    height: 82px;
+    border: 2px solid #c51f75;
+    border-radius: 41px;
+    cursor: pointer;
+    @include common-text(30px, #ce2573, 600, none);
+  }
+
+  // 取消订阅
+  .unsubscribe {
+    margin-top: 56px;
+    margin-bottom: 67px;
+    line-height: 30px;
+    @include common-text(18px, #5e676f, 300, none);
+  }
+
+  // end
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+  [data-reach-dialog-content] {
+    width: 75vw;
+  }
+
+  .dialog_content {
+    padding: 0;
+
+    .dialog_title {
+      margin-bottom: 20px;
+      @include common-text(25px, #131720, 800, center);
+    }
+
+    .input_title {
+      margin-bottom: 10px;
+    }
+
+    .input_box {
+      height: 30px;
+      input {
+        font-size: 13px;
+      }
+      img {
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    .required_field {
+      margin-bottom: 20px;
+      @include common-text(15px, #c51f75, 300, none);
+    }
+
+    .describe_yourself {
+      margin-bottom: 10px;
+      @include common-text(15px, #131720, 600, none);
+    }
+
+    .check_prompt {
+      margin: 20px 0;
+      @include common-text(12px, #5e676f, 300, none);
+    }
+
+    .other_explain {
+      margin-bottom: 20px;
+
+      @include common-text(12px, #5e676f, 300, none);
+    }
+
+    .submit_button {
+      width: 180px;
+      height: 50px;
+      @include common-text(20px, #ce2573, 600, none);
+    }
+
+    // 取消订阅
+    .unsubscribe {
+      margin: 30px 0;
+      @include common-text(15px, #5e676f, 300, none);
+    }
+    p {
+      line-height: 18px !important;
+    }
+  }
+}
+
+// smallDesktop 小桌面
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .dialog_content {
+    padding: 0;
+
+    .dialog_title {
+      margin-bottom: 30px;
+      @include common-text(30px, #131720, 800, center);
+    }
+
+    .input_title {
+      margin-bottom: 10px;
+    }
+
+    .input_box {
+      height: 40px;
+      input {
+        font-size: 16px;
+      }
+      img {
+        height: 12px;
+        width: 12px;
+      }
+    }
+
+    .required_field {
+      margin-bottom: 20px;
+      @include common-text(20px, #c51f75, 300, none);
+    }
+
+    .describe_yourself {
+      margin-bottom: 10px;
+      @include common-text(20px, #131720, 600, none);
+    }
+
+    .check_prompt {
+      margin: 30px 0;
+      @include common-text(14px, #5e676f, 300, none);
+    }
+
+    .other_explain {
+      margin-bottom: 40px;
+      @include common-text(14px, #5e676f, 300, none);
+    }
+
+    .submit_button {
+      width: 180px;
+      height: 50px;
+      @include common-text(20px, #ce2573, 600, none);
+    }
+
+    // 取消订阅
+    .unsubscribe {
+      margin: 30px 0;
+      @include common-text(18px, #5e676f, 300, none);
+    }
+  }
+}
+/* desktop 桌面 */
+@media screen and (min-width: 1199px) and (max-width: 3000px) {
+  .dialog_content {
+    .input_title {
+      margin-bottom: 20px;
+      @include common-text(24px, #131720, 300, none);
+      line-height: 30px;
+    }
+
+    .describe_yourself {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+[data-reach-dialog-overlay] {
+  z-index: 10;
+}
